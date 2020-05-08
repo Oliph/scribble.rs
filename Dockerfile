@@ -20,4 +20,5 @@ COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifica
 # Selfcontained executable used as entrypoint
 COPY --from=builder /app/scribblers /scribblers
 
+EXPOSE 8080
 ENTRYPOINT ["/scribblers"]
